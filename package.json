@@ -1,0 +1,28 @@
+{
+  "name": "wp-ferry",
+  "version": "1.1.0",
+  "description": "Deploy a WordPress theme and pull / push the database, uploads and plugins over plain FTP and HTTPS.",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": "^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "deploy": "node scripts/deploy.mjs",
+    "deploy:clean": "node scripts/deploy.mjs --clean",
+    "pull": "node scripts/pull.mjs",
+    "push": "node scripts/push.mjs",
+    "restore": "node scripts/restore.mjs",
+    "restore:server": "node scripts/restore-server.mjs",
+    "ftp-cert": "node scripts/ftp.mjs",
+    "check:serialized": "node scripts/check-serialized.mjs",
+    "deploy:prod": "node scripts/deploy.mjs --config=deploy.prod.json",
+    "deploy:clean:prod": "node scripts/deploy.mjs --clean --config=deploy.prod.json",
+    "pull:prod": "node scripts/pull.mjs --config=deploy.prod.json",
+    "ftp-cert:prod": "node scripts/ftp.mjs --config=deploy.prod.json"
+  },
+  "devDependencies": {
+    "basic-ftp": "6.2.2",
+    "mysql2": "3.24.5"
+  }
+}

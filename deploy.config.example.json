@@ -1,0 +1,17 @@
+{
+    "_comment": [
+        "Example config for the deploy, pull and push scripts. The full guide: scripts/README.md.",
+        "Setup: copy this file, remove .example from the name (deploy.config.json) and replace the placeholders below with the real details. deploy.config.json is ignored by git.",
+        "Production: the same, in deploy.prod.json (also ignored by git); the commands ending in :prod use it.",
+        "Then run `npm run ftp-cert` (or `npm run ftp-cert:prod`) to pin the FTPS certificate into ca, and preview with `npm run deploy -- --dry-run`.",
+        "Keep FTP details only in deploy.*.json files: deploy never uploads them, except this example."
+    ],
+    "host": "ftp.example.com",
+    "port": 21,
+    "user": "ftp-user",
+    "password": "ftp-password",
+    "secure": true,
+    "ca": "",
+    "remoteDir": "/path/to/site/wp-content/themes/your-theme",
+    "siteUrl": "https://dev.example.com"
+}
